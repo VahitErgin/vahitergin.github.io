@@ -635,30 +635,6 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spaci
 .footer__legal a:hover { color: var(--accent); }
 
 /* =========================================================
-   ÇEREZ RIZA BANNER'I
-   ========================================================= */
-.consent {
-  position: fixed; left: 0; right: 0; bottom: 0; z-index: 80;
-  padding: 16px; pointer-events: none;
-  transform: translateY(120%); opacity: 0;
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.3, 1), opacity 0.3s ease;
-}
-.consent.is-open { transform: none; opacity: 1; pointer-events: auto; }
-.consent__inner {
-  max-width: 1000px; margin: 0 auto;
-  display: flex; align-items: center; gap: 22px; flex-wrap: wrap;
-  padding: 20px 24px; border-radius: 16px;
-  background: var(--surface); border: 1px solid var(--border);
-  box-shadow: var(--shadow-lg);
-}
-.consent__text { flex: 1; min-width: 260px; }
-.consent__text strong { display: block; font-size: 15px; font-family: "Space Grotesk", sans-serif; }
-.consent__text p { margin-top: 6px; font-size: 13.5px; color: var(--text-soft); line-height: 1.55; }
-.consent__text a { color: var(--accent); font-weight: 600; }
-.consent__text a:hover { text-decoration: underline; }
-.consent__actions { display: flex; gap: 10px; flex-shrink: 0; }
-
-/* =========================================================
    YASAL METİN SAYFASI
    ========================================================= */
 .legal { max-width: 780px; }
@@ -726,10 +702,6 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spaci
 }
 
 @media (max-width: 560px) {
-  .consent { padding: 10px; }
-  .consent__inner { padding: 18px; gap: 16px; }
-  .consent__actions { width: 100%; }
-  .consent__actions .btn { flex: 1; }
   .trust { flex-direction: column; align-items: flex-start; gap: 12px; }
   .footer__grid { grid-template-columns: 1fr; }
   .footer__bottom { flex-direction: column; text-align: left; }
