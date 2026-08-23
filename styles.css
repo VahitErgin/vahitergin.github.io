@@ -630,6 +630,60 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spaci
   font-size: 13px; color: var(--text-soft);
 }
 
+.footer__legal { display: flex; flex-wrap: wrap; gap: 6px 18px; }
+.footer__legal a { transition: color 0.2s ease; }
+.footer__legal a:hover { color: var(--accent); }
+
+/* =========================================================
+   ÇEREZ RIZA BANNER'I
+   ========================================================= */
+.consent {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 80;
+  padding: 16px; pointer-events: none;
+  transform: translateY(120%); opacity: 0;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.3, 1), opacity 0.3s ease;
+}
+.consent.is-open { transform: none; opacity: 1; pointer-events: auto; }
+.consent__inner {
+  max-width: 1000px; margin: 0 auto;
+  display: flex; align-items: center; gap: 22px; flex-wrap: wrap;
+  padding: 20px 24px; border-radius: 16px;
+  background: var(--surface); border: 1px solid var(--border);
+  box-shadow: var(--shadow-lg);
+}
+.consent__text { flex: 1; min-width: 260px; }
+.consent__text strong { display: block; font-size: 15px; font-family: "Space Grotesk", sans-serif; }
+.consent__text p { margin-top: 6px; font-size: 13.5px; color: var(--text-soft); line-height: 1.55; }
+.consent__text a { color: var(--accent); font-weight: 600; }
+.consent__text a:hover { text-decoration: underline; }
+.consent__actions { display: flex; gap: 10px; flex-shrink: 0; }
+
+/* =========================================================
+   YASAL METİN SAYFASI
+   ========================================================= */
+.legal { max-width: 780px; }
+.legal h1 { font-size: clamp(28px, 4vw, 40px); margin-top: 10px; }
+.legal__updated { font-size: 13.5px; color: var(--text-soft); margin-top: 10px; }
+.legal h2 { font-size: clamp(22px, 3vw, 30px); margin-top: 44px; }
+.legal h3 { font-size: 18px; margin-top: 28px; }
+.legal p { margin-top: 14px; color: var(--text-soft); font-size: 16px; }
+.legal ul { margin-top: 14px; padding-left: 22px; display: flex; flex-direction: column; gap: 8px; }
+.legal li { color: var(--text-soft); font-size: 15.5px; }
+.legal a { color: var(--accent); font-weight: 600; }
+.legal a:hover { text-decoration: underline; }
+.legal__note {
+  margin-top: 22px; padding: 16px 18px; border-radius: 12px;
+  background: var(--accent-soft); border: 1px solid color-mix(in srgb, var(--accent) 26%, transparent);
+}
+.legal__note p { margin-top: 0; color: var(--text); font-size: 14.5px; }
+.legal__table { width: 100%; overflow-x: auto; margin-top: 16px; }
+.legal__table table { width: 100%; border-collapse: collapse; min-width: 420px; }
+.legal__table th, .legal__table td {
+  text-align: left; padding: 11px 14px; font-size: 14.5px;
+  border: 1px solid var(--border); color: var(--text-soft);
+}
+.legal__table th { background: var(--bg-alt); color: var(--text); font-weight: 600; }
+
 /* =========================================================
    REVEAL
    ========================================================= */
@@ -672,6 +726,10 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spaci
 }
 
 @media (max-width: 560px) {
+  .consent { padding: 10px; }
+  .consent__inner { padding: 18px; gap: 16px; }
+  .consent__actions { width: 100%; }
+  .consent__actions .btn { flex: 1; }
   .trust { flex-direction: column; align-items: flex-start; gap: 12px; }
   .footer__grid { grid-template-columns: 1fr; }
   .footer__bottom { flex-direction: column; text-align: left; }

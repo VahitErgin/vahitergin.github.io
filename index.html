@@ -612,10 +612,36 @@
       </div>
       <div class="footer__bottom">
         <span>© <span id="year"></span> Serra Bilişim. Tüm hakları saklıdır.</span>
+        <span class="footer__legal">
+          <a href="gizlilik.html">KVKK Aydınlatma Metni</a>
+          <a href="gizlilik.html#cerez">Çerez Politikası</a>
+          <a href="#" data-consent-reopen>Çerez tercihleri</a>
+        </span>
         <span>SAP ve SAP Business One, SAP SE'nin tescilli markalarıdır.</span>
       </div>
     </div>
   </footer>
+
+  <!-- ===== ÇEREZ RIZASI ===== -->
+  <div class="consent" id="consent" role="dialog" aria-live="polite" aria-label="Çerez tercihleri">
+    <div class="consent__inner">
+      <div class="consent__text">
+        <strong>Çerezleri kullanmamıza izin verir misiniz?</strong>
+        <p>
+          Sitemizin hangi içeriklerin ilgi çektiğini anlamak ve reklam
+          performansını ölçmek için LinkedIn Insight Tag çerezlerini kullanmak
+          istiyoruz. Bu çerezler siteyi kullanmanız için zorunlu değildir;
+          reddederseniz site aynı şekilde çalışır. Ayrıntı için
+          <a href="gizlilik.html#cerez">Çerez Politikası</a> ve
+          <a href="gizlilik.html">KVKK Aydınlatma Metni</a>.
+        </p>
+      </div>
+      <div class="consent__actions">
+        <button class="btn btn--ghost btn--sm" id="consentReject" type="button">Reddet</button>
+        <button class="btn btn--primary btn--sm" id="consentAccept" type="button">Kabul et</button>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
