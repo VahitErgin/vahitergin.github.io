@@ -329,6 +329,35 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spaci
   border-radius: 4px; background: linear-gradient(90deg, color-mix(in srgb, var(--p) 80%, transparent), var(--p));
 }
 
+/* --- Panora: pano tasarımcısı bileşenleri --- */
+.split { display: grid; grid-template-columns: 1.35fr 1fr; gap: 10px; }
+.split .panel { display: flex; flex-direction: column; gap: 8px; }
+
+.pie {
+  width: 62px; height: 62px; margin: 2px auto 0; border-radius: 50%; position: relative;
+  background: conic-gradient(
+    var(--p) 0 46%,
+    color-mix(in srgb, var(--p) 55%, transparent) 46% 76%,
+    color-mix(in srgb, var(--p) 25%, transparent) 76% 100%
+  );
+}
+.pie span {
+  position: absolute; inset: 21%; border-radius: 50%;
+  background: var(--bg-alt); border: 1px solid var(--border);
+}
+.legend { display: flex; flex-direction: column; gap: 4px; }
+.legend span { display: flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 600; color: var(--text-soft); }
+.legend i { width: 8px; height: 8px; border-radius: 2px; background: var(--c); flex-shrink: 0; }
+
+.sched {
+  display: flex; align-items: center; gap: 9px;
+  padding: 9px 12px; border-radius: 10px;
+  background: color-mix(in srgb, var(--p) 10%, transparent);
+  border: 1px solid color-mix(in srgb, var(--p) 28%, transparent);
+}
+.sched__i { color: var(--p); font-size: 14px; line-height: 1; flex-shrink: 0; }
+.sched__t { flex: 1; font-size: 11.5px; font-weight: 600; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
 .chips { display: flex; flex-wrap: wrap; gap: 6px; }
 .chips span {
   font-size: 10.5px; font-weight: 600; padding: 4px 10px; border-radius: 999px;
@@ -425,6 +454,23 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spaci
   display: inline-block; font-size: 12px; font-weight: 700;
   letter-spacing: 1.2px; text-transform: uppercase; color: var(--p);
 }
+
+/* Öne çıkan ürün */
+.pcard__flag {
+  display: inline-flex; align-items: center; gap: 7px;
+  margin-bottom: 14px; padding: 6px 14px; border-radius: 999px;
+  background: color-mix(in srgb, var(--p) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--p) 34%, transparent);
+  color: var(--p); font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
+}
+.pcard__flag::before {
+  content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor;
+  box-shadow: 0 0 0 4px color-mix(in srgb, currentColor 22%, transparent);
+}
+.pcard__flag + .pcard__kicker { display: block; }
+.pcard--feature .pcard__body > p strong { color: var(--text); font-weight: 700; }
+.pcard--feature .pcard__feats strong { color: var(--text); font-weight: 700; }
+.pcard--feature .mock { box-shadow: var(--shadow-lg), 0 0 0 1px color-mix(in srgb, var(--p) 22%, transparent); }
 .pcard__body h3 { font-size: clamp(24px, 3vw, 32px); margin-top: 8px; }
 .pcard__body > p { margin-top: 14px; color: var(--text-soft); font-size: 16px; }
 
@@ -632,6 +678,7 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spaci
   .cta__actions .btn, .hero__actions .btn { width: 100%; }
   .kpis--3 { grid-template-columns: repeat(2, 1fr); }
   .kpis--3 .kpi:last-child { grid-column: 1 / -1; }
+  .split { grid-template-columns: 1fr; }
 }
 
 @media (prefers-reduced-motion: reduce) {

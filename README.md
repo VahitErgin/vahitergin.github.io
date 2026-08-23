@@ -14,6 +14,9 @@ Yayında: https://serrabilisim.com
 Ürün bölümü `index.html` içindeki `<div class="products">` altında,
 her ürün bir `<article class="pcard">` olarak duruyor.
 
+Sıra: **Panora** (öne çıkan, `pcard--feature`), Serra Bordro, Serra Banka,
+Serra Üretim, SAWBot, Serra e-Dönüşüm.
+
 **Yeni ürün eklemek:** mevcut bir `pcard`'ı kopyala, şunları değiştir:
 - `style="--p:#RENK"` — ürünün vurgu rengi (tüm mockup öğeleri bu rengi kullanır)
 - `pcard--rev` sınıfı — görselin sağa mı sola mı geleceğini belirler (sırayla ekle)
