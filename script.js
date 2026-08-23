@@ -11,7 +11,7 @@
    Çerez kullanmaz, parmak izi çıkarmaz, kişisel veri toplamaz —
    bu yüzden çerez rızası banner'ına gerek yoktur.
    --------------------------------------------------------- */
-const CLOUDFLARE_ANALYTICS_TOKEN = ""; // örn: "a1b2c3d4e5f6..."
+const CLOUDFLARE_ANALYTICS_TOKEN = "79bc7bf30f7c4d0fa1f26ef336e6fa87";
 
 (function () {
   if (!CLOUDFLARE_ANALYTICS_TOKEN) return;
