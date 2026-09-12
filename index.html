@@ -27,15 +27,44 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Serra Bilişim",
-    "url": "https://serrabilisim.com/",
-    "email": "iletisim@serrabilisim.com",
-    "telephone": "+90 506 875 30 33",
-    "address": { "@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR" },
-    "description": "SAP Business One için Panora raporlama panosu, bordro, banka entegrasyonu, üretim takip, WhatsApp AI asistanı ve e-Dönüşüm ürünleri."
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://serrabilisim.com/#org",
+        "name": "Serra Bilişim",
+        "alternateName": ["Serra Bilisim", "Serra Bilişim Yazılım"],
+        "url": "https://serrabilisim.com/",
+        "email": "iletisim@serrabilisim.com",
+        "telephone": "+90 506 875 30 33",
+        "address": { "@type": "PostalAddress", "addressLocality": "İstanbul", "addressCountry": "TR" },
+        "areaServed": { "@type": "Country", "name": "Türkiye" },
+        "knowsAbout": ["SAP Business One", "SAP B1 raporlama", "SAP add-on geliştirme", "e-Fatura", "e-Dönüşüm", "bordro yazılımı", "banka entegrasyonu", "üretim takip"],
+        "description": "SAP Business One için Panora raporlama panosu, bordro, banka entegrasyonu, üretim takip, WhatsApp AI asistanı ve e-Dönüşüm ürünleri."
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://serrabilisim.com/#website",
+        "url": "https://serrabilisim.com/",
+        "name": "Serra Bilişim",
+        "inLanguage": "tr-TR",
+        "publisher": { "@id": "https://serrabilisim.com/#org" }
+      },
+      {
+        "@type": "ItemList",
+        "name": "Serra Bilişim ürünleri",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "item": { "@type": "SoftwareApplication", "name": "Panora", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "SAP Business One verisini tek ekranda toplayan raporlama ve iş zekâsı panosu.", "publisher": { "@id": "https://serrabilisim.com/#org" } } },
+          { "@type": "ListItem", "position": 2, "item": { "@type": "SoftwareApplication", "name": "Serra Bordro", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "SAP Business One ile entegre çalışan, Türkiye mevzuatına uyumlu bordro çözümü.", "publisher": { "@id": "https://serrabilisim.com/#org" } } },
+          { "@type": "ListItem", "position": 3, "item": { "@type": "SoftwareApplication", "name": "Serra Banka", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "Banka ekstrelerini SAP Business One'a otomatik aktaran banka entegrasyon çözümü.", "publisher": { "@id": "https://serrabilisim.com/#org" } } },
+          { "@type": "ListItem", "position": 4, "item": { "@type": "SoftwareApplication", "name": "Serra Üretim", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "SAP Business One için saha odaklı üretim takip ve terminal çözümü.", "publisher": { "@id": "https://serrabilisim.com/#org" } } },
+          { "@type": "ListItem", "position": 5, "item": { "@type": "SoftwareApplication", "name": "SAWBot", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "SAP Business One verisini WhatsApp üzerinden sorgulayan yapay zekâ asistanı.", "publisher": { "@id": "https://serrabilisim.com/#org" } } },
+          { "@type": "ListItem", "position": 6, "item": { "@type": "SoftwareApplication", "name": "Serra e-Dönüşüm", "applicationCategory": "BusinessApplication", "operatingSystem": "Web", "description": "SAP Business One için e-Fatura, e-Arşiv, e-İrsaliye ve e-Defter entegrasyonu.", "publisher": { "@id": "https://serrabilisim.com/#org" } } }
+        ]
+      }
+    ]
   }
   </script>
+
 </head>
 <body>
   <a class="skip" href="#urunler">İçeriğe geç</a>
