@@ -716,3 +716,26 @@ h1, h2, h3, h4 { font-family: "Space Grotesk", "Inter", sans-serif; letter-spaci
   .float-a, .float-b, .bars i, .flow__arrow em { animation: none; }
   html { scroll-behavior: auto; }
 }
+
+/* =========================================================
+   ÜRÜN DETAY SAYFALARI (/urunler/<slug>/)
+   ========================================================= */
+.crumbs {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  margin-bottom: clamp(28px, 4vw, 44px);
+  font-size: 14px; color: var(--text-soft);
+}
+.crumbs a { color: var(--text-soft); text-decoration: none; transition: color 0.18s ease; }
+.crumbs a:hover { color: var(--accent); }
+.crumbs span[aria-hidden] { opacity: 0.45; }
+.crumbs span[aria-current] { color: var(--text); font-weight: 600; }
+
+/* ürün sayfasında kart başlığı h1 — ana sayfadaki h3 ile aynı ölçek */
+.pcard__body h1 { font-size: clamp(24px, 3vw, 32px); margin-top: 8px; }
+
+.pcard__cta { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 26px; }
+
+/* diğer ürünler ızgarasındaki tıklanabilir kart */
+.scard--link { display: block; text-decoration: none; color: inherit; }
+.scard--link .pcard__kicker { display: block; margin-bottom: 6px; }
+.scard--link:hover { border-color: var(--p, var(--accent)); }
